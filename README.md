@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-The Newsletter Delivery System is a comprehensive project comprising two distinct repositories, ["Publisher"](https://github.com/prayogatriady/newsletter-pubsub/newsletter-pub) and ["Subscriber"](https://github.com/prayogatriady/newsletter-pubsub/newsletter-sub), designed to streamline the process of managing and delivering newsletters to a broad audience. Leveraging cutting-edge technologies and best practices, this project demonstrates proficiency in software development, asynchronous communication, and effective email delivery.
+The Newsletter Delivery System is a comprehensive project comprising two distinct repositories, ["Publisher"](https://github.com/prayogatriady/newsletter-pubsub/tree/main/newsletter-pub) and ["Subscriber"](https://github.com/prayogatriady/newsletter-pubsub/tree/main/newsletter-sub), designed to streamline the process of managing and delivering newsletters to a broad audience. Leveraging cutting-edge technologies and best practices, this project demonstrates proficiency in software development, asynchronous communication, and effective email delivery.
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@ Explain how to install your Go project. Include any prerequisites, dependencies,
 
 1. [Login](https://cloud.google.com/) to your GCP Account and [create](https://cloud.google.com/iam/docs/keys-create-delete) your `credential.json` file for Google Pub/Sub.
 2. [Create](https://cloud.google.com/pubsub/docs/create-topic) Google Pub/Sub topic.
-2. [Create](https://www.getmailbird.com/gmail-app-password/) your Gmail app password. (App password will be used in [the subscriber repository](https://github.com/prayogatriady/newsletter-pubsub/newsletter-sub))
+2. [Create](https://www.getmailbird.com/gmail-app-password/) your Gmail app password. (App password will be used in [the subscriber repository](https://github.com/prayogatriady/newsletter-pubsub/tree/main/newsletter-sub))
 
 ### Installation
 
@@ -43,10 +43,10 @@ TOPIC_NAME=your-pubsub-topicName
 
 4. Create `.env` file in ./newsletter-sub
 ```sh
-PROJECT_ID=main-form-398914
-SUBSCRIPTION_NAME=pubsub-test-sub
-SENDER_MAIL=prayogatriady.work@gmail.com
-SENDER_PASSWORD=zwiq hheg zzye msfs
+PROJECT_ID=your-gcp-projectId
+SUBSCRIPTION_NAME=your-pubsub-subscriptionName
+SENDER_MAIL=your-gmail@gmail.com
+SENDER_PASSWORD=your-gmail-app-password
 ```
 
 5. Move your `credential.json` file to ./newsletter-pub and ./newsletter-sub
