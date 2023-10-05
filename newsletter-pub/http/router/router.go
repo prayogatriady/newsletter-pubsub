@@ -1,12 +1,16 @@
 package router
 
-import "github.com/gin-gonic/gin"
+import (
+	m "newsletter-pub/http/middleware"
+
+	"github.com/gin-gonic/gin"
+)
 
 func ApiRoutes(app *gin.RouterGroup) {
 	injectEmail := InitEmail()
 	injectPing := InitPing()
 
-	api := app.Group("/api")
+	api := app.Group("/api", m.LoggerMiddleware())
 	{
 		api.GET("/ping", injectPing.Ping)
 
